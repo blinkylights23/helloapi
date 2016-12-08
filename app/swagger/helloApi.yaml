@@ -1,0 +1,14 @@
+swagger: '2.0'
+info:
+  $ref: ./refs/info.yaml
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /hello:
+    $ref: ./refs/paths/hello.yaml
+  /secret:
+    $ref: ./refs/paths/secret.yaml

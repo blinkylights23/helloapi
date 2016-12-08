@@ -1,0 +1,21 @@
+{
+  "name": "helloapi",
+  "version": "1.0.0",
+  "description": "Test API",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "nodemon app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Smith <paul@paulsmith.io>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-winston": "^2.0.0",
+    "jsonwebtoken": "^7.1.9",
+    "nconf": "^0.8.4",
+    "nodemon": "^1.11.0",
+    "swagger-express-middleware": "^1.0.0-alpha.12",
+    "winston": "^2.3.0"
+  }
+}

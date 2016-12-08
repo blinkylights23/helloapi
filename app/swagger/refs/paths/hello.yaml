@@ -1,0 +1,18 @@
+get:
+  description: Returns a greeting
+  operationId: hello
+  tags:
+    - Hello
+  produces:
+    - text/plain
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: ../models/hello.yaml
+    default:
+      description: Default response
+      schema:
+        $ref: ../models/error.yaml
+
+

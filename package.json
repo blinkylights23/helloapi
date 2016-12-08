@@ -10,12 +10,13 @@
   "author": "Paul Smith <paul@paulsmith.io>",
   "license": "MIT",
   "dependencies": {
+    "config": "^1.24.0",
     "express": "^4.14.0",
-    "express-winston": "^2.0.0",
     "jsonwebtoken": "^7.1.9",
-    "nconf": "^0.8.4",
-    "nodemon": "^1.11.0",
-    "swagger-express-middleware": "^1.0.0-alpha.12",
-    "winston": "^2.3.0"
+    "morgan": "^1.7.0",
+    "swagger": "^0.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

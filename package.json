@@ -1,7 +1,7 @@
 {
   "name": "helloapi",
   "version": "1.0.0",
-  "description": "Test API",
+  "description": "Hello API",
   "main": "app/index.js",
   "scripts": {
     "start": "nodemon app/index.js",

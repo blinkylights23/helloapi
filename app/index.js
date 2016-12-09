@@ -20,7 +20,7 @@ swaggerRoutes(app, {
   api: `${__dirname}/swagger/test.yaml`,
   docsPath: '/api-docs',
   handlers: `${__dirname}/handlers`,
-  authorizers: `${__dirname}/security`,
+  authorizers: `${__dirname}/auth`,
   maintainHeaders: false
 });
 

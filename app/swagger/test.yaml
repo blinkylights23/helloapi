@@ -12,6 +12,11 @@ consumes:
   - application/json
 produces:
   - application/json
+securityDefinitions:
+  jwtAuth:
+    type: apiKey
+    name: jwtAuth
+    in: header
 paths:
   /hello:
     get:
@@ -28,7 +33,30 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
+  /secret:
+    get:
+      summary: Learn a fascinating secret
+      operationId: secret
+      security:
+        - jwtAuth:
+      tags:
+        - secret
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Secret'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
 definitions:
+  Secret:
+    required:
+      - message
+    properties:
+      message:
+        type: string
   Hello:
     required:
       - message

@@ -10,13 +10,17 @@
   "author": "Paul Smith <paul@paulsmith.io>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "config": "^1.24.0",
     "express": "^4.14.0",
     "jsonwebtoken": "^7.1.9",
     "morgan": "^1.7.0",
-    "swagger": "^0.7.5"
+    "swagger-routes": "^1.4.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0"
   }
 }

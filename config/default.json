@@ -1,5 +1,6 @@
 {
-    "port": 3000,
-    "secret": "EXO*!#E1!Z@h",
-    "morganLogs": "dev"
+  "port": 3000,
+  "secret": "EXO*!#E1!Z@h",
+  "morganLogs": "dev",
+  "users": []
 }

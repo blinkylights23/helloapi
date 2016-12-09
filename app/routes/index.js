@@ -1,9 +1,9 @@
 'use strict';
 
-var normalRoutes = require('./normal'),
-    apiRoutes = require('./api');
+var apiRoutes = require('./api'),
+    authRoutes = require('./authenticate');
 
 module.exports = {
-  normal: normalRoutes,
-  api: apiRoutes
+  api: apiRoutes,
+  auth: authRoutes
 };

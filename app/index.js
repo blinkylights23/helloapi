@@ -1,10 +1,9 @@
 'use strict';
 
 var express = require('express'),
-    bodyParser = require('body-parser'),
-    jwt = require('jsonwebtoken'),
     config = require('config'),
     morgan = require('morgan'),
+    routes = require('./routes'),
     swaggerRoutes = require('swagger-routes');
 
 
@@ -14,7 +13,9 @@ app.use(express.static(`${__dirname}/static`));
 app.set('secret', config.get('secret'));
 
 // Middleware
-app.use(morgan(config.get('morganLogs')));
+if (config.util.getEnv('NODE_ENV') !== 'test') {
+  app.use(morgan(config.get('morganLogs')));
+}
 swaggerRoutes(app, {
   api: `${__dirname}/swagger/test.yaml`,
   docsPath: '/api-docs',
@@ -23,13 +24,14 @@ swaggerRoutes(app, {
   maintainHeaders: false
 });
 
-// Routers
-// var routes = require('./routes');
-// app.use('/', routes.normal);
-// app.use('/api', routes.api);
+// Routes
+app.use('/', routes.api);
+app.use('/auth', routes.auth);
 
 // Listen
 app.listen(config.get('port'), () => {
   console.log(`Express server started on port ${config.get('port')}`);
 });
 
+// This, for testing
+module.exports = app;

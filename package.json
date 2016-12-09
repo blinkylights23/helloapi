@@ -5,7 +5,7 @@
   "main": "app/index.js",
   "scripts": {
     "start": "nodemon app/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000"
   },
   "author": "Paul Smith <paul@paulsmith.io>",
   "license": "MIT",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
+    "chai-jwt": "^2.0.0",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0"
   }

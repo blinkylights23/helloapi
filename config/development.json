@@ -1,3 +1,6 @@
 {
-  "secret": "development"
+  "secret": "development",
+  "users": [
+    { "username": "devuser", "password": "omfgdontusethisinprod" }
+  ]
 }

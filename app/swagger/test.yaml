@@ -1,0 +1,47 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Swagger Test
+  license:
+    name: MIT
+basePath: /v1
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /hello:
+    get:
+      summary: Get a nice greeting
+      operationId: hello
+      tags:
+        - hello
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Hello'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Hello:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  Error:
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
